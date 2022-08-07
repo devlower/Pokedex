@@ -13,6 +13,8 @@
 		89579B87289EFB6E00EBF3F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89579B85289EFB6E00EBF3F7 /* Main.storyboard */; };
 		89579B89289EFB7000EBF3F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89579B88289EFB7000EBF3F7 /* Assets.xcassets */; };
 		89579B8C289EFB7000EBF3F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89579B8A289EFB7000EBF3F7 /* LaunchScreen.storyboard */; };
+		89579B94289EFF0300EBF3F7 /* SourcePokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89579B93289EFF0300EBF3F7 /* SourcePokemon.swift */; };
+		89579B97289EFFF000EBF3F7 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89579B96289EFFF000EBF3F7 /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		89579B88289EFB7000EBF3F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89579B8B289EFB7000EBF3F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89579B8D289EFB7000EBF3F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89579B93289EFF0300EBF3F7 /* SourcePokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcePokemon.swift; sourceTree = "<group>"; };
+		89579B96289EFFF000EBF3F7 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		89579B7E289EFB6E00EBF3F7 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				89579B95289EFF1E00EBF3F7 /* Models */,
 				89579B7F289EFB6E00EBF3F7 /* AppDelegate.swift */,
 				89579B81289EFB6E00EBF3F7 /* SceneDelegate.swift */,
 				89579B83289EFB6E00EBF3F7 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				89579B8D289EFB7000EBF3F7 /* Info.plist */,
 			);
 			path = Pokedex;
+			sourceTree = "<group>";
+		};
+		89579B95289EFF1E00EBF3F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89579B93289EFF0300EBF3F7 /* SourcePokemon.swift */,
+				89579B96289EFFF000EBF3F7 /* Pokemon.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89579B97289EFFF000EBF3F7 /* Pokemon.swift in Sources */,
+				89579B94289EFF0300EBF3F7 /* SourcePokemon.swift in Sources */,
 				89579B84289EFB6E00EBF3F7 /* ViewController.swift in Sources */,
 				89579B80289EFB6E00EBF3F7 /* AppDelegate.swift in Sources */,
 				89579B82289EFB6E00EBF3F7 /* SceneDelegate.swift in Sources */,
@@ -289,11 +305,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pokedex/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pokédex";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,7 +322,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,11 +335,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pokedex/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pokédex";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +352,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

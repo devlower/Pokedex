@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Pokedex
 //
-//  Created by Angelica dos Santos on 06/08/22.
+//  Created by Tuanne Assenço on 06/08/22.
 //
 
 import UIKit
