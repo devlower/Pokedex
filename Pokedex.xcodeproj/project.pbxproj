@@ -15,6 +15,7 @@
 		89579B8C289EFB7000EBF3F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89579B8A289EFB7000EBF3F7 /* LaunchScreen.storyboard */; };
 		89579B94289EFF0300EBF3F7 /* SourcePokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89579B93289EFF0300EBF3F7 /* SourcePokemon.swift */; };
 		89579B97289EFFF000EBF3F7 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89579B96289EFFF000EBF3F7 /* Pokemon.swift */; };
+		89579B9D28A009A300EBF3F7 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89579B9C28A009A300EBF3F7 /* PokemonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		89579B96289EFFF000EBF3F7 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		89579B9A289FF4E600EBF3F7 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		89579B9B289FF4E600EBF3F7 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
+		89579B9C28A009A300EBF3F7 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				89579B88289EFB7000EBF3F7 /* Assets.xcassets */,
 				89579B8A289EFB7000EBF3F7 /* LaunchScreen.storyboard */,
 				89579B8D289EFB7000EBF3F7 /* Info.plist */,
+				89579B9C28A009A300EBF3F7 /* PokemonTableViewCell.swift */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				89579B97289EFFF000EBF3F7 /* Pokemon.swift in Sources */,
 				89579B94289EFF0300EBF3F7 /* SourcePokemon.swift in Sources */,
 				89579B84289EFB6E00EBF3F7 /* ViewController.swift in Sources */,
+				89579B9D28A009A300EBF3F7 /* PokemonTableViewCell.swift in Sources */,
 				89579B80289EFB6E00EBF3F7 /* AppDelegate.swift in Sources */,
 				89579B82289EFB6E00EBF3F7 /* SceneDelegate.swift in Sources */,
 			);
