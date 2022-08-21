@@ -2,13 +2,13 @@
 //  PokemonTableViewCell.swift
 //  Pokedex
 //
-//  Created by Angelica dos Santos on 07/08/22.
+//  Created by Tuanne Assenço on 07/08/22.
 //
 
 import UIKit
 
 class PokemonTableViewCell: UITableViewCell {
-
+    
     private let innerView: UIView = {
         let element = UIView()
         element.backgroundColor = .white
@@ -39,7 +39,18 @@ class PokemonTableViewCell: UITableViewCell {
         element.text = "Pokémon name"
         return element
     }()
-
+    
+    func setCellData(pokemon: Pokemon){
+        pokemonName.text = pokemon.name.capitalized
+        pokemonId.text = "\(pokemon.id)"
+        if let artworkUrl = pokemon.sprites.other.officialArtwork.frontDefault {
+            guard let url = URL(string: artworkUrl) else { return }
+            pokemonIcon.load(url: url)
+        } else {
+            pokemonIcon.image = UIImage(named: "whoIsPoke")
+        }
+    }
+    
     private func setup(){
         
         guard let iconWidth = pokemonIcon.image?.size.height else { return }
@@ -49,7 +60,7 @@ class PokemonTableViewCell: UITableViewCell {
         innerView.addSubview(pokemonId)
         innerView.addSubview(pokemonName)
         
-        contentView.backgroundColor = .darkGray
+        contentView.backgroundColor = UIColor(named: "Background Color")
         
         NSLayoutConstraint.activate([
             innerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
@@ -79,7 +90,18 @@ class PokemonTableViewCell: UITableViewCell {
         setup()
         
     }
-    
-   
-    
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }

@@ -8,10 +8,10 @@
 import Foundation
 
 class SourcePokemon: Codable {
-    let results: [Result]
+    let results: [SourcePokemonResults]
 }
 
-class Result: Codable {
+class SourcePokemonResults: Codable {
     let name: String
     let url: String
 }

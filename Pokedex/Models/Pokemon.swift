@@ -44,12 +44,12 @@ class OtherSprites: Codable {
     let officialArtwork: OfficialArtwork
     
     enum CodingKeys: String, CodingKey {
-        case officialArtwork = "official_artwork"
+        case officialArtwork = "official-artwork"
     }
 }
 
 class OfficialArtwork: Codable {
-    let frontDefault: String
+    let frontDefault: String?
     
     enum CodingKeys: String, CodingKey {
         case frontDefault = "front_default"
