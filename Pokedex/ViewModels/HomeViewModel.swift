@@ -12,7 +12,7 @@ class HomeViewModel {
     var sourcePokemonList: [SourcePokemonResults] = []
     
     func getSourcePokemons(completion: @escaping () -> Void) {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?&limit=100") else { return }
+        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?&limit=1154") else { return }
         
         let session = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
@@ -52,13 +52,14 @@ class HomeViewModel {
                 do {
                     let pokemon = try JSONDecoder().decode(Pokemon.self, from: data)
                     self.pokemonList.append(pokemon)
-                    if self.pokemonList.count == 100 {
+                    if self.pokemonList.count == self.sourcePokemonList.count {
                         completion()
                     }
                     
                 }catch {
                     print("Decode error ):\(error)")
                 }
+                
             }
             session.resume()
         }
